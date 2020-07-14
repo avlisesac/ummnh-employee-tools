@@ -11,3 +11,122 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button:focus {
+  outline: none;
+}
+h1, h2, h3, p {
+  text-align: center;
+  color: white;
+}
+
+.homeScreenMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeScreenButton {
+  background-color: #ffcb05;
+  color: #00274c;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  width: 200px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackFont {
+  color: black;
+}
+
+.logo {
+  width: 300px;
+}
+
+.signInPageMainContainer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.signInButtonContainer {
+    text-align: center;
+}
+
+.signInButton {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 191px;
+  height: 46px;
+  padding: 0px;
+}
+
+.whiteboardDisplay {
+    background-color: white;
+}
+
+.inSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.punchContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.punchForm {
+  align-items: center;
+}
+
+.punchMessageInput {
+  width: 300px;
+}
+
+.punchButton {
+  margin-top: 15px;
+  width:200px;
+  height: 75px;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.whiteboardGridContainer {
+  background-color: white;
+}
+
+.employeeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 250px;
+  margin: 20px;
+}
+
+.userImage {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}

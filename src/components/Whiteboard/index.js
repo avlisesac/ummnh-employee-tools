@@ -88,7 +88,7 @@ class WhiteboardBase extends Component {
     })
   }
 
-  toggledInOut = event => {
+  makeLogEntry = () => {
     {/*Create date and time objects*/}
     const date = new Date();
     const currentDate = date.toDateString();
@@ -101,13 +101,30 @@ class WhiteboardBase extends Component {
       status: statusMessage,
       time: currentTime,
     })
+  }
+
+  toggledInOut = event => {
+    const userClockedIn = this.state.user.clockedIn
+
+    if(!userClockedIn){
+      {/*Ask if user has done daily online COVID screening questionaire*/}
+      const completedScreening = window.confirm(
+        `Press OK if you have completed U-M's daily online COVID screening questionaire. If you have not, please press Cancel and come back when you have completed the questionaire.`
+      )
+
+      if(!completedScreening){
+        {/*If the user hasn't completed the screening, break out of this function*/}
+        alert('Please come back after completing the screening.')
+        return
+      }
+
+    }
+    this.makeLogEntry()
 
     {/*Update User's Status*/}
     this.props.firebase.user(this.props.authUser.uid).update({
       clockedIn: !this.state.user.clockedIn
     })
-
-
   }
 
   onChange = event => {

@@ -107,14 +107,13 @@ class WhiteboardBase extends Component {
     const userClockedIn = this.state.user.clockedIn
 
     if(!userClockedIn){
-      {/*Ask if user has done daily online COVID screening questionaire*/}
+      {/*Ask if user has done daily online COVID screening questionnaire*/}
       const completedScreening = window.confirm(
-        `Press OK if you have completed U-M's daily online COVID screening questionaire. If you have not, please press Cancel and come back when you have completed the questionaire.`
+        `Press OK to certify that you have completed U-M's daily online COVID screening check. If you have not, please press Cancel and return after you have completed the check (link below).`
       )
 
       if(!completedScreening){
         {/*If the user hasn't completed the screening, break out of this function*/}
-        alert('Please come back after completing the screening.')
         return
       }
 
@@ -175,6 +174,10 @@ class WhiteboardBase extends Component {
                 <Switch checked={this.state.user.clockedIn} onChange={this.toggledInOut} name="inOut" />
                 <Typography variant="h6">In</Typography>
               </Grid>
+            </Grid>
+
+            <Grid item xs={12}>
+              <a href="https://healthscreen.umich.edu/" target="_blank">Online Screening Check</a>
             </Grid>
 
             <Grid item xs={12}>

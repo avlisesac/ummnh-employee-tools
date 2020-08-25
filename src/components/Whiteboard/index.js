@@ -177,7 +177,7 @@ class WhiteboardBase extends Component {
             </Grid>
 
             <Grid item xs={12}>
-              <a href="https://healthscreen.umich.edu/" target="_blank">Online Screening Check</a>
+              <a href="https://responsiblue.umich.edu/" target="_blank">Online Screening Check</a>
             </Grid>
 
             <Grid item xs={12}>
